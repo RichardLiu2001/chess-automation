@@ -155,3 +155,77 @@ console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkErr
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+1652895264905	geckodriver	INFO	Listening on 127.0.0.1:64778
+1652895264915	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "64779" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofileXgo4N3"
+2022-05-18 12:34:25.315 plugin-container[10718:560772] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 12:34:25.316 plugin-container[10718:560772] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 12:34:25.325 plugin-container[10718:560772] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 12:34:25.325 plugin-container[10718:560772] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 12:34:25.325 plugin-container[10718:560777] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 12:34:25.325 plugin-container[10718:560777] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1652895265326	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofileXgo4N3/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:64779/devtools/browser/d915c133-1393-41bb-a20a-736be0d0abc2
+1652895266769	Marionette	INFO	Listening on port 64791
+Read port: 64791
+1652895266882	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+JavaScript error: https://www.chess.com/bundles/app/js/play-vendors__stable.client.26b05790.js, line 84: Error: Request aborted
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 120cdd1a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 114f44760 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 114f448d0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 114f44bb0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 11013d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 114f44a40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 10722, MediaDecoderStateMachine #1] WARNING: 114f448d0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+2022-05-18 12:39:33.232 firefox-bin[10717:560684] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <GeckoServicesNSMenuItem: 0x12f5fea50 spam, ke='Command-F4'>, but is only supported for system-provided menu items; will not be used
+1652895851970	geckodriver	INFO	Listening on 127.0.0.1:64956
+1652895851981	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "64957" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofilemScOQQ"
+2022-05-18 12:44:12.385 plugin-container[10821:566009] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 12:44:12.385 plugin-container[10821:566009] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 12:44:12.389 plugin-container[10821:566009] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 12:44:12.389 plugin-container[10821:566009] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 12:44:12.390 plugin-container[10821:566007] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 12:44:12.390 plugin-container[10821:566007] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1652895852397	Marionette	INFO	Marionette enabled
+console.error: (new TypeError("topBrowsingContext is null", "resource://devtools/server/actors/watcher/browsing-context-helpers.jsm", 352))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofilemScOQQ/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:64957/devtools/browser/28ff0479-4f3e-4c53-a631-929ae16aacd5
+1652895853842	Marionette	INFO	Listening on port 64969
+Read port: 64969
+1652895853938	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1652895973688	Marionette	INFO	Stopped listening on port 64791
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+

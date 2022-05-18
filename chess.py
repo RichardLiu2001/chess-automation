@@ -81,23 +81,18 @@ def wait_opponent_move(my_color):
 
     return element.text
 
-opponent_move = wait_opponent_move(color)
-
-print(opponent_move)
-
-# move_found = False
-# while not move_found:
-#     try:
-#         black_move = driver.find_element(By.CLASS_NAME, "black.node.selected")
-#         move_found = True
-#     except:
-#         try: 
-#             white_move = driver.find_element(By.CLASS_NAME, "white.node.selected")
-#             move_found = True
-
-#         except:
-#             continue
+if color == 'white':
+    opponent_move = wait_opponent_move(color)
+    print(opponent_move)
 
 move_count = 1
-most_recent_move_element = driver.find_element_by_xpath('//div[@class="black.node" and @data-ply=' + '"' + str(move_count) + '"' + ']')
+most_recent_move_element = driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']')
+most_recent_move_text = most_recent_move_element.text
 
+print("most recent move: " + most_recent_move_text)
+
+move_count += 2
+most_recent_move_element = driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']')
+most_recent_move_text = most_recent_move_element.text
+
+print("most recent move: " + most_recent_move_text)
