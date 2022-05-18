@@ -1,6 +1,9 @@
+from multiprocessing.connection import wait
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time 
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 driver = webdriver.Firefox()
 #vegetable = driver.find_element(By.CLASS_NAME, "tomatoes")
@@ -43,18 +46,19 @@ while not found_game:
 
 
 color = "black"
+# bottom black
 
 found_color = False
 
 while not found_color:
 
     try:
-        driver.find_element(By.CLASS_NAME, "clock-component clock-white clock-top clock-live clock-player-turn player-clock")
+        driver.find_element(By.CLASS_NAME, "clock-component.clock-black.clock-bottom.clock-live.clock-running.player-clock.clock-player-turn")
         found_color = True
     except:
 
         try:
-            driver.find_element(By.CLASS_NAME, "clock-component.clock-black.clock-top.clock-live.player-clock")
+            driver.find_element(By.CLASS_NAME, "clock-component.clock-black.clock-top.clock-live.clock-running.player-clock")
             found_color = True
             color = "white"
         except:
@@ -63,3 +67,37 @@ while not found_color:
 
 #color = driver.find_element(By.CLASS_NAME, "clock-component.clock-white.clock-top.clock-live.clock-player-turn.player-clock")
 print(str(color))
+black_move = None
+white_move = None
+
+if color == "white":
+    time.sleep(3)
+
+def wait_opponent_move(my_color):
+
+    element = WebDriverWait(driver, 60).until(
+        EC.presence_of_element_located((By.CLASS_NAME, my_color + ".node.selected"))
+    )
+
+    return element.text
+
+opponent_move = wait_opponent_move(color)
+
+print(opponent_move)
+
+# move_found = False
+# while not move_found:
+#     try:
+#         black_move = driver.find_element(By.CLASS_NAME, "black.node.selected")
+#         move_found = True
+#     except:
+#         try: 
+#             white_move = driver.find_element(By.CLASS_NAME, "white.node.selected")
+#             move_found = True
+
+#         except:
+#             continue
+
+move_count = 1
+most_recent_move_element = driver.find_element_by_xpath('//div[@class="black.node" and @data-ply=' + '"' + str(move_count) + '"' + ']')
+
