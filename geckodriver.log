@@ -1,0 +1,157 @@
+1652853950871	geckodriver	INFO	Listening on 127.0.0.1:50767
+1652853950889	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "50768" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofileBr4YhM"
+1652853951573	Marionette	INFO	Marionette enabled
+2022-05-18 01:05:51.599 plugin-container[8091:472506] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:05:51.600 plugin-container[8091:472506] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 01:05:51.617 plugin-container[8091:472506] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:05:51.617 plugin-container[8091:472506] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 01:05:51.617 plugin-container[8091:472516] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:05:51.617 plugin-container[8091:472516] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofileBr4YhM/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:50768/devtools/browser/df1439e5-18c2-4ee3-aefd-00c17d3aa26f
+1652853954157	Marionette	INFO	Listening on port 50784
+Read port: 50784
+1652853954192	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+JavaScript error: https://www.chess.com/bundles/app/js/play-vendors__stable.client.26b05790.js, line 84: Error: Request aborted
+1652853984455	geckodriver	INFO	Listening on 127.0.0.1:50860
+1652853984476	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "50861" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofilevdnIg4"
+1652853985829	Marionette	INFO	Marionette enabled
+2022-05-18 01:06:25.852 plugin-container[8125:473423] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:06:25.853 plugin-container[8125:473423] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 01:06:25.865 plugin-container[8125:473423] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:06:25.865 plugin-container[8125:473423] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 01:06:25.866 plugin-container[8125:473421] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:06:25.866 plugin-container[8125:473421] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofilevdnIg4/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:50861/devtools/browser/0310df0d-1d76-4f2d-b905-757453995718
+1652853989513	Marionette	INFO	Listening on port 50876
+Read port: 50876
+1652853989620	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+1652854009037	Marionette	INFO	Stopped listening on port 50784
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1652854054250	geckodriver	INFO	Listening on 127.0.0.1:50959
+1652854054265	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "50960" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofilerPSUFn"
+2022-05-18 01:07:34.908 plugin-container[8204:474476] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:07:34.908 plugin-container[8204:474476] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1652854054917	Marionette	INFO	Marionette enabled
+2022-05-18 01:07:34.925 plugin-container[8204:474476] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:07:34.925 plugin-container[8204:474476] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 01:07:34.930 plugin-container[8204:474502] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:07:34.930 plugin-container[8204:474502] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1652854056716	Marionette	INFO	Stopped listening on port 50876
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofilerPSUFn/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:50960/devtools/browser/d4a61551-d2ab-41da-81ec-8dd7249348f2
+1652854058138	Marionette	INFO	Listening on port 50975
+Read port: 50975
+1652854058194	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+JavaScript error: https://www.chess.com/bundles/app/js/play-vendors__stable.client.26b05790.js, line 84: Error: Request aborted
+2022-05-18 01:08:10.873 firefox-bin[8203:474392] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <GeckoServicesNSMenuItem: 0x1289e7d60 spam, ke='Command-F4'>, but is only supported for system-provided menu items; will not be used
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1652854511398	geckodriver	INFO	Listening on 127.0.0.1:51206
+1652854511413	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "51207" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofilecHdq8V"
+2022-05-18 01:15:12.064 plugin-container[8290:479184] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:15:12.064 plugin-container[8290:479184] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1652854512070	Marionette	INFO	Marionette enabled
+2022-05-18 01:15:12.072 plugin-container[8290:479184] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:15:12.072 plugin-container[8290:479184] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 01:15:12.072 plugin-container[8290:479194] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:15:12.072 plugin-container[8290:479194] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofilecHdq8V/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:51207/devtools/browser/fb671ce0-4ee6-43b5-987b-69f662a57174
+1652854514324	Marionette	INFO	Listening on port 51220
+Read port: 51220
+1652854514421	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+JavaScript error: https://www.chess.com/bundles/app/js/play-vendors__stable.client.26b05790.js, line 84: Error: Request aborted
+2022-05-18 01:16:04.479 firefox-bin[8289:479112] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <GeckoServicesNSMenuItem: 0x1310e7270 spam, ke='Command-F4'>, but is only supported for system-provided menu items; will not be used
+1652854705847	Marionette	INFO	Stopped listening on port 50975
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1652854707426	geckodriver	INFO	Listening on 127.0.0.1:51333
+1652854707434	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "51334" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofileqnVf6u"
+2022-05-18 01:18:27.819 plugin-container[8456:481506] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:18:27.819 plugin-container[8456:481506] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 01:18:27.823 plugin-container[8456:481506] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:18:27.823 plugin-container[8456:481506] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 01:18:27.824 plugin-container[8456:481504] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:18:27.824 plugin-container[8456:481504] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1652854707830	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofileqnVf6u/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:51334/devtools/browser/4eb057bd-6ce3-4151-ba30-9bf0e0707168
+1652854709292	Marionette	INFO	Listening on port 51349
+Read port: 51349
+1652854709409	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+JavaScript error: https://www.chess.com/bundles/app/js/play-vendors__stable.client.26b05790.js, line 84: Error: Request aborted
+JavaScript warning: https://cdn.intergient.com/pageos/1.8.2/videoCard.4de12bb2f660de18101d.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/playwireprebidheader597261727146/moatheader.js, line 220: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/-xusYJ2at0dbS1ujZyBHkA92CrhnscK4RJsdXU_Rclk.js line 1 > eval line 957 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://rtb.gumgum.com/usync/amzns2s?r=https%3A%2F%2Fs.amazon-adsystem.com%2Fdcm%3Fpid%3D1d602ef3-e6a6-4fad-b208-3ada49c66ebc%26id%3D, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: https://secure-ds.serving-sys.com/BurstingCachedScripts//Ad_2_218_3_0/ebStdBanner.js, line 119: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1652854727994	Marionette	INFO	Stopped listening on port 51220
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1652854730019	geckodriver	INFO	Listening on 127.0.0.1:51785
+1652854730034	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "51786" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofile8J87G9"
+2022-05-18 01:18:50.790 plugin-container[8486:482278] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:18:50.791 plugin-container[8486:482278] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 01:18:50.799 plugin-container[8486:482278] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:18:50.799 plugin-container[8486:482278] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-18 01:18:50.800 plugin-container[8486:482306] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-18 01:18:50.800 plugin-container[8486:482306] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1652854730808	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofile8J87G9/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:51786/devtools/browser/aa66b0d5-c43e-4364-a3ad-7c051739434a
+1652854733592	Marionette	INFO	Listening on port 51800
+Read port: 51800
+1652854733677	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.intergient.com/pageos/1.8.2/videoCard.4de12bb2f660de18101d.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+JavaScript error: https://www.chess.com/bundles/app/js/play-vendors__stable.client.26b05790.js, line 84: Error: Request aborted
+2022-05-18 01:19:56.486 firefox-bin[8485:482225] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <GeckoServicesNSMenuItem: 0x12df1b350 spam, ke='Command-F4'>, but is only supported for system-provided menu items; will not be used
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("topBrowsingContext is null", "resource://devtools/server/actors/watcher/browsing-context-helpers.jsm", 352))
+1652855002358	Marionette	INFO	Stopped listening on port 51349
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

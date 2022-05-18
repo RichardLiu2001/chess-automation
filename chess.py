@@ -10,6 +10,12 @@ chess_url = "https://www.chess.com/play/online"
 driver.get(chess_url)
 
 
+change_time_button = driver.find_element(By.CLASS_NAME, "icon-font-chess.chevron-bottom.time-selector-chevron")
+change_time_button.click()
+
+bullet_button = driver.find_element(By.CLASS_NAME, "ui_v5-button-component.ui_v5-button-basic.ui_v5-button-small.ui_v5-button-full.time-selector-category-btn")
+bullet_button.click()
+
 play_button = driver.find_element(By.CLASS_NAME, "ui_v5-button-component.ui_v5-button-primary.ui_v5-button-large.ui_v5-button-full")
 play_button.click()
 
@@ -36,16 +42,24 @@ while not found_game:
         #print("No game found")
 
 
-#time.sleep(1)
-
 color = "black"
 
-try:
-    driver.find_element(By.CLASS_NAME, "clock-component.clock-white.clock-top.clock-live.clock-player-turn.player-clock")
-except:
-    color = "white"
+found_color = False
 
-print("color: " + color)
+while not found_color:
+
+    try:
+        driver.find_element(By.CLASS_NAME, "clock-component clock-white clock-top clock-live clock-player-turn player-clock")
+        found_color = True
+    except:
+
+        try:
+            driver.find_element(By.CLASS_NAME, "clock-component.clock-black.clock-top.clock-live.player-clock")
+            found_color = True
+            color = "white"
+        except:
+            continue
+
 
 #color = driver.find_element(By.CLASS_NAME, "clock-component.clock-white.clock-top.clock-live.clock-player-turn.player-clock")
-#print(str(color))
+print(str(color))
