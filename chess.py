@@ -47,23 +47,75 @@ def get_color():
                 color = "white"
             except:
                 continue
-    
     return color
 
-def wait_opponent_move(my_color):
+def wait_move(color):
     # return text of opponent move
     element = WebDriverWait(driver, float('inf')).until(
-        EC.presence_of_element_located((By.CLASS_NAME, my_color + ".node.selected"))
+        EC.presence_of_element_located((By.CLASS_NAME, color + ".node.selected"))
     )
 
     return element.text
 
+def get_move(player_color, move_count):
+
+    try:
+        return driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']').text
+    except:
+        wait_move(player_color)
+        most_recent_move_element = driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']')
+        
+        try:
+            piece_element = most_recent_move_element.find_element(by=By.XPATH, value=".//*")
+            piece = piece_element.get_attribute("data-figurine")
+        except:
+            piece = ""
+        # piece = driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']//span')
+        print("piece: " + str(piece))
+        return most_recent_move_element.text
 
 
 change_to_bullet()
 find_match()
 wait_game_start()
 color = get_color()
+print("you are " + color)
+
+
+move_count = 1
+
+opponent_color = 'white'
+
+if color == 'black':
+    opponent_move = get_move('white', move_count)
+    print("white move: " + opponent_move)
+    move_count += 1
+
+else:
+    opponent_color = 'black'
+
+game_over = False
+
+while True:
+    # make and register move
+    p1 = 'white'
+    p2 = 'black'
+
+    if move_count % 2 == 0:
+        # this is black's move
+        p1 = p2
+        p2 = 'white'
+
+    p1_move = get_move(p1, move_count)
+
+    print(p1 + " move: " + p1_move)
+    move_count += 1
+
+    p2_move = get_move(p2, move_count)
+    move_count += 1
+
+    print(p2 + " move: " + p2_move)
+
 
 
 print("your color is :" + str(color))
