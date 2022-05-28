@@ -954,3 +954,182 @@ console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkErr
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
 1653020342013	Marionette	INFO	Stopped listening on port 53597
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1653763507222	geckodriver	INFO	Listening on 127.0.0.1:52553
+1653763507229	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "52554" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofilev3V8FL"
+2022-05-28 11:45:07.625 plugin-container[2820:104615] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-28 11:45:07.626 plugin-container[2820:104615] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-28 11:45:07.630 plugin-container[2820:104615] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-28 11:45:07.630 plugin-container[2820:104615] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-28 11:45:07.631 plugin-container[2820:104636] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-28 11:45:07.631 plugin-container[2820:104636] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1653763507638	Marionette	INFO	Marionette enabled
+2022-05-28 11:45:08.223 firefox-bin[2819:104526] Warning: Expected min height of view: (<NSButton: 0x11cd4b400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 11:45:08.223 firefox-bin[2819:104526] Warning: Expected min height of view: (<NSButton: 0x11f111c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 11:45:08.224 firefox-bin[2819:104526] Warning: Expected min height of view: (<NSButton: 0x11f10e000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 11:45:08.224 firefox-bin[2819:104526] Warning: Expected min height of view: (<NSButton: 0x11f10d800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 11:45:08.225 firefox-bin[2819:104526] Warning: Expected min height of view: (<NSButton: 0x11f10e400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 11:45:08.225 firefox-bin[2819:104526] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x11f10f000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 11:45:08.226 firefox-bin[2819:104526] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x11b312800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofilev3V8FL/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:52554/devtools/browser/c4d79a2b-0725-4f42-bdc4-e1c981659eb9
+1653763509264	Marionette	INFO	Listening on port 52568
+Read port: 52568
+1653763509293	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.intergient.com/pageos/1.8.3/videoCard.4de12bb2f660de18101d.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+JavaScript error: , line 0: uncaught exception: Error: Tyche Blocked! [object Event]
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 2824, MediaDecoderStateMachine #1] WARNING: 10de3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+1653764022493	geckodriver	INFO	Listening on 127.0.0.1:52709
+1653764022500	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "52710" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofile3bvs9p"
+2022-05-28 11:53:42.900 plugin-container[3021:110188] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-28 11:53:42.901 plugin-container[3021:110188] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-28 11:53:42.905 plugin-container[3021:110188] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-28 11:53:42.905 plugin-container[3021:110188] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-28 11:53:42.906 plugin-container[3021:110186] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-28 11:53:42.906 plugin-container[3021:110186] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1653764022912	Marionette	INFO	Marionette enabled
+2022-05-28 11:53:43.776 firefox-bin[3020:110108] Warning: Expected min height of view: (<NSButton: 0x1196e5800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 11:53:43.776 firefox-bin[3020:110108] Warning: Expected min height of view: (<NSButton: 0x120e0dc00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 11:53:43.777 firefox-bin[3020:110108] Warning: Expected min height of view: (<NSButton: 0x120e0e000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 11:53:43.778 firefox-bin[3020:110108] Warning: Expected min height of view: (<NSButton: 0x120e0c000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 11:53:43.778 firefox-bin[3020:110108] Warning: Expected min height of view: (<NSButton: 0x120e10000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 11:53:43.779 firefox-bin[3020:110108] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x120e0e800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 11:53:43.780 firefox-bin[3020:110108] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x118792400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofile3bvs9p/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:52710/devtools/browser/1e6e09f6-818f-4ffe-8fb8-c4be51540365
+1653764025029	Marionette	INFO	Listening on port 52727
+Read port: 52727
+1653764025099	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.intergient.com/pageos/1.8.3/videoCard.4de12bb2f660de18101d.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+JavaScript error: , line 0: uncaught exception: Error: Tyche Blocked! [object Event]
+[Child 3025, MediaDecoderStateMachine #1] WARNING: 108d3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3025, MediaDecoderStateMachine #1] WARNING: 108d3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+1653764559311	geckodriver	INFO	Listening on 127.0.0.1:52908
+1653764559320	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "52909" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofiledpQAVw"
+2022-05-28 12:02:39.762 plugin-container[3262:115955] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-28 12:02:39.762 plugin-container[3262:115955] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-28 12:02:39.767 plugin-container[3262:115955] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-28 12:02:39.767 plugin-container[3262:115955] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-28 12:02:39.767 plugin-container[3262:115963] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-28 12:02:39.767 plugin-container[3262:115963] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1653764559778	Marionette	INFO	Marionette enabled
+2022-05-28 12:02:40.486 firefox-bin[3261:115867] Warning: Expected min height of view: (<NSButton: 0x128580c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 12:02:40.486 firefox-bin[3261:115867] Warning: Expected min height of view: (<NSButton: 0x12890e000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 12:02:40.487 firefox-bin[3261:115867] Warning: Expected min height of view: (<NSButton: 0x12890e400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 12:02:40.488 firefox-bin[3261:115867] Warning: Expected min height of view: (<NSButton: 0x12890e800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 12:02:40.488 firefox-bin[3261:115867] Warning: Expected min height of view: (<NSButton: 0x128912c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 12:02:40.489 firefox-bin[3261:115867] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12890fc00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 12:02:40.489 firefox-bin[3261:115867] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x11836f000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofiledpQAVw/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:52909/devtools/browser/71c66ff1-5365-4cd9-933a-f9e81d567450
+1653764561554	Marionette	INFO	Listening on port 52924
+Read port: 52924
+1653764561602	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.intergient.com/pageos/1.8.3/videoCard.4de12bb2f660de18101d.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+JavaScript error: , line 0: uncaught exception: Error: Tyche Blocked! [object Event]
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203da40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203da40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203da40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 109b2e030 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203da40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203da40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203da40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 109b2e030 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203da40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 10203d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3266, MediaDecoderStateMachine #1] WARNING: 109b2e030 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+1653764676665	geckodriver	INFO	Listening on 127.0.0.1:52996
+1653764676673	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "52997" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofile6jAh4W"
+2022-05-28 12:04:37.284 plugin-container[3328:117486] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-28 12:04:37.285 plugin-container[3328:117486] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-28 12:04:37.289 plugin-container[3328:117486] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-28 12:04:37.289 plugin-container[3328:117486] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-28 12:04:37.289 plugin-container[3328:117496] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-28 12:04:37.289 plugin-container[3328:117496] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1653764677311	Marionette	INFO	Marionette enabled
+2022-05-28 12:04:38.180 firefox-bin[3327:117424] Warning: Expected min height of view: (<NSButton: 0x12c297800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 12:04:38.180 firefox-bin[3327:117424] Warning: Expected min height of view: (<NSButton: 0x12c612800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 12:04:38.181 firefox-bin[3327:117424] Warning: Expected min height of view: (<NSButton: 0x12c60b800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 12:04:38.181 firefox-bin[3327:117424] Warning: Expected min height of view: (<NSButton: 0x12c60f800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 12:04:38.182 firefox-bin[3327:117424] Warning: Expected min height of view: (<NSButton: 0x12c610c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 12:04:38.182 firefox-bin[3327:117424] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12c60c400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-28 12:04:38.183 firefox-bin[3327:117424] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12c291400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofile6jAh4W/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:52997/devtools/browser/577c1073-5aff-41cc-835a-a5d766a4bd36
+1653764679118	Marionette	INFO	Listening on port 53009
+Read port: 53009
+1653764679178	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.intergient.com/pageos/1.8.3/videoCard.4de12bb2f660de18101d.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+JavaScript error: , line 0: uncaught exception: Error: Tyche Blocked! [object Event]
+[Child 3332, MediaDecoderStateMachine #1] WARNING: 106843760 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3332, MediaDecoderStateMachine #1] WARNING: 1068438d0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3332, MediaDecoderStateMachine #1] WARNING: 104f3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3332, MediaDecoderStateMachine #1] WARNING: 104f3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3332, MediaDecoderStateMachine #1] WARNING: 104f3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3332, MediaDecoderStateMachine #1] WARNING: 104f3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 3332, MediaDecoderStateMachine #1] WARNING: 104f3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

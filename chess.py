@@ -49,30 +49,35 @@ def get_color():
                 continue
     return color
 
-def wait_move(color):
+def wait_move(color, move_count):
     # return text of opponent move
-    element = WebDriverWait(driver, float('inf')).until(
-        EC.presence_of_element_located((By.CLASS_NAME, color + ".node.selected"))
-    )
+    #most_recent_move_element = driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']')
 
-    return element.text
+    while True:
+        try:
+            return driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']')
+        except:
+            continue
+            #try:
+            #    move_element = driver.find_element(By.CLASS_NAME, color + ".node")
+            #    return move_element.text
+            #except:
+             #   continue
+
 
 def get_move(player_color, move_count):
 
     try:
         return driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']').text
     except:
-        wait_move(player_color)
-        most_recent_move_element = driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']')
+        most_recent_move_element = wait_move(player_color, move_count)
         
         try:
             piece_element = most_recent_move_element.find_element(by=By.XPATH, value=".//*")
             piece = piece_element.get_attribute("data-figurine")
         except:
             piece = ""
-        # piece = driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']//span')
-        print("piece: " + str(piece))
-        return most_recent_move_element.text
+        return piece + most_recent_move_element.text
 
 
 change_to_bullet()
