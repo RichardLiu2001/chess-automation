@@ -4,6 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from Engine import Engine
+
 driver = webdriver.Firefox()
 url = driver.command_executor._url       #"http://127.0.0.1:60622/hub"
 session_id = driver.session_id            #'4e167f26-dc1d-4f51-a207-f761eaf73c31'
@@ -33,6 +35,7 @@ def wait_game_start():
 
 def get_color():
     color = "black"
+    opponent_color = 'white'
 
     found_color = False
     while not found_color:
@@ -44,9 +47,10 @@ def get_color():
                 driver.find_element(By.CLASS_NAME, "clock-component.clock-black.clock-top.clock-live.clock-running.player-clock")
                 found_color = True
                 color = "white"
+                opponent_color = 'black'
             except:
                 continue
-    return color
+    return color, opponent_color
 
 def wait_move(color, move_count):
     # return text of opponent move
@@ -57,11 +61,6 @@ def wait_move(color, move_count):
             return driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']')
         except:
             continue
-            #try:
-            #    move_element = driver.find_element(By.CLASS_NAME, color + ".node")
-            #    return move_element.text
-            #except:
-             #   continue
 
 
 def get_move(player_color, move_count):
@@ -82,8 +81,9 @@ def get_move(player_color, move_count):
 change_to_bullet()
 find_match()
 wait_game_start()
-color = get_color()
+color, opponent_color = get_color()
 print("you are " + color)
+engine = Engine(opponent_color)
 
 
 move_count = 1
