@@ -10,8 +10,6 @@ from Engine import Engine
 from mouse import Clicker
 
 driver = webdriver.Firefox()
-url = driver.command_executor._url       #"http://127.0.0.1:60622/hub"
-session_id = driver.session_id            #'4e167f26-dc1d-4f51-a207-f761eaf73c31'
 chess_url = "https://www.chess.com/play/online"
 driver.get(chess_url)
 
