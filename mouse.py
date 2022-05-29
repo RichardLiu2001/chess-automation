@@ -25,30 +25,6 @@ class Clicker:
         self.gear_x = self.gear.location['x'] + self.gear.size['width'] / 2
         self.gear_y = self.gear.location['y'] + self.gear.size['height'] / 2
 
-
-    def update_square_size(self):
-
-        e = self.driver.find_element(By.CLASS_NAME, "piece.wr.square-11")
-
-
-        e = self.driver.find_element(By.CLASS_NAME, "board-layout-icon.icon-font-chess.circle-gearwheel")
-        #self.square_size = self.driver.find_element(By.CLASS_NAME, "piece.wk.square-51")
-        location = e.location
-        size = e.size
-        width, height = size['width'], size['height']
-        #print("gear location: " + str(location) + ", width: " + str(width) + ", height: " + str(height))
-
-        try:
-            e = self.driver.find_element(By.CLASS_NAME, "piece.wr.square-11")
-        except:
-            e = self.driver.find_element(By.CLASS_NAME, "piece.br.square-11")
-        #self.square_size = self.driver.find_element(By.CLASS_NAME, "piece.wk.square-51")
-        location = e.location
-        size = e.size
-        width, height = size['width'], size['height']
-        print("bottom right rook location: " + str(location) + ", width: " + str(width) + ", height: " + str(height))
-
-
     def get_origin_square_element_castle(self, color):
         
         prefix = "piece." + color[0] + "k.square-"
@@ -113,9 +89,6 @@ class Clicker:
 
     def click_origin(self, uci):
         
-        # origin_square_element = self.get_origin_square_element(uci, san, color)
-        # origin_square_element.click()
-        
         x, y = self.uci_square_to_coordinate(uci[0], uci[1])
         self.click_coordinate(x, y, 1)
 
@@ -143,7 +116,5 @@ class Clicker:
             emoji.click()
         except:
             return
-# calculate coordinate of wanted 
-
 
 # top right rook x offset = gear_x 
