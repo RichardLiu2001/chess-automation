@@ -31,6 +31,8 @@ def find_match():
     play_button = driver.find_element(By.CLASS_NAME, "ui_v5-button-component.ui_v5-button-primary.ui_v5-button-large.ui_v5-button-full")
     play_button.click()
 
+    #set_level('advanced')
+
     # click play as guest
     guest_button = WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.ID, "guest-button")))
     guest_button.click()
@@ -135,8 +137,7 @@ while True:
     if p1 == color:
         uci, san = engine.get_engine_move()
         print("suggested move: " + san)
-        clicker.click_piece(uci, san, p1)
-        clicker.click_destination(uci)
+        clicker.make_move(uci, san)
         clicker.emoji()
 
     p1_move = get_move(p1, move_count)
@@ -148,8 +149,7 @@ while True:
     if p2 == color:
         uci, san = engine.get_engine_move()
         print("suggested move: " + san)
-        clicker.click_piece(uci, san, p2)
-        clicker.click_destination(uci)
+        clicker.make_move(uci, san)
         clicker.emoji()
 
 
@@ -157,3 +157,5 @@ while True:
     print(p2 + " move: " + p2_move)
     engine.process_move(p2_move)
     move_count += 1
+
+    #rematch: ui_v5-button-icon icon-font-chess checkmark

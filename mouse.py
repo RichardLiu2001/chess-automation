@@ -85,34 +85,54 @@ class Clicker:
         board_element = self.driver.find_element(By.CLASS_NAME, 'board')
         webdriver.ActionChains(self.driver).move_to_element(board_element).perform()
 
-
-    def click_piece(self, uci, san, color):
-        
-        origin_square_element = self.get_origin_square_element(uci, san, color)
-        origin_square_element.click()
     
+    def uci_square_to_coordinate(self, col_letter, row):
 
-    def click_destination(self, uci):
-        
-        dest_col_letter = uci[2]
-        dest_col = ord(dest_col_letter) - 97
-
-        dest_row = int(uci[3]) - 1
+        col = ord(col_letter) - 97
+        row = int(row) - 1
 
         # 0 based indexing
 
         if self.color == 'white':
 
-            dest_x = self.bottom_right_x + self.square_size * dest_col
-            dest_y = self.bottom_right_y - self.square_size * dest_row
+            x = self.bottom_right_x + self.square_size * col
+            y = self.bottom_right_y - self.square_size * row
         else:
-            dest_x = self.bottom_right_x + self.square_size * (7 - dest_col)
-            dest_y = self.bottom_right_y - self.square_size * (7 - dest_row)
+            x = self.bottom_right_x + self.square_size * (7 - col)
+            y = self.bottom_right_y - self.square_size * (7 - row)
 
+        return x, y
+
+    def click_coordinate(self, x, y, times):
         action = webdriver.common.action_chains.ActionChains(self.driver)
-        action.move_to_element_with_offset(self.gear, dest_x - self.gear_x, dest_y - self.gear_y)
-        action.click()
-        action.perform()
+        action.move_to_element_with_offset(self.gear, x - self.gear_x, y - self.gear_y)
+        
+        for _ in range(times):
+            action.click()
+            action.perform()
+
+    def click_origin(self, uci):
+        
+        # origin_square_element = self.get_origin_square_element(uci, san, color)
+        # origin_square_element.click()
+        
+        x, y = self.uci_square_to_coordinate(uci[0], uci[1])
+        self.click_coordinate(x, y, 1)
+
+
+    def click_destination(self, uci, san):
+        
+        x, y = self.uci_square_to_coordinate(uci[2], uci[3])
+  
+        # promote
+        if '=' in san:
+            self.click_coordinate(x, y, 2)
+        else:
+            self.click_coordinate(x, y, 1)
+
+    def make_move(self, uci, san):
+        self.click_origin(uci)
+        self.click_destination(uci, san)
 
     def emoji(self):
         try:
