@@ -12,5 +12,11 @@ class Engine:
         self.board.push_san(move)
 
     def get_engine_move(self):
-        result = self.engine.play(self.board, chess.engine.Limit(time=1))
-        return result.move
+        uci_Move = self.engine.play(self.board, chess.engine.Limit(time=0.5))
+        uci = uci_Move.move.uci()
+
+        move = self.board.parse_uci(uci)
+        san = self.board.san(move)
+        #print(str(uci, san))
+        return uci, san
+

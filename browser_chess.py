@@ -1,10 +1,10 @@
-from multiprocessing.connection import wait
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from Engine import Engine
+from mouse import Clicker
 
 driver = webdriver.Firefox()
 url = driver.command_executor._url       #"http://127.0.0.1:60622/hub"
@@ -66,16 +66,23 @@ def wait_move(color, move_count):
 def get_move(player_color, move_count):
 
     try:
-        return driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']').text
-    except:
-        most_recent_move_element = wait_move(player_color, move_count)
-        
+        move_element = driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']').text
         try:
-            piece_element = most_recent_move_element.find_element(by=By.XPATH, value=".//*")
+            piece_element = move_element.find_element(by=By.XPATH, value=".//*")
             piece = piece_element.get_attribute("data-figurine")
         except:
             piece = ""
-        return piece + most_recent_move_element.text
+        return piece + move_element.text
+        #return driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']').text
+    except:
+        move_element = wait_move(player_color, move_count)
+        
+        try:
+            piece_element = move_element.find_element(by=By.XPATH, value=".//*")
+            piece = piece_element.get_attribute("data-figurine")
+        except:
+            piece = ""
+        return piece + move_element.text
 
 
 change_to_bullet()
@@ -84,6 +91,8 @@ wait_game_start()
 color, opponent_color = get_color()
 print("you are " + color)
 engine = Engine(opponent_color)
+clicker = Clicker(driver, color)
+clicker.initialize_sizes()
 
 
 move_count = 1
@@ -93,6 +102,7 @@ opponent_color = 'white'
 if color == 'black':
     opponent_move = get_move('white', move_count)
     print("white move: " + opponent_move)
+    engine.process_move(opponent_move)
     move_count += 1
 
 else:
@@ -104,18 +114,36 @@ while True:
     # make and register move
     p1 = 'white'
     p2 = 'black'
-
+    
     if move_count % 2 == 0:
         # this is black's move
         p1 = p2
         p2 = 'white'
 
-    p1_move = get_move(p1, move_count)
+    print("ply: " + str(move_count))
 
+    if p1 == color:
+        uci, san = engine.get_engine_move()
+        print("suggested move: " + san)
+        clicker.click_piece(uci, san, p1)
+        clicker.click_destination(uci)
+        clicker.emoji()
+
+    p1_move = get_move(p1, move_count)
     print(p1 + " move: " + p1_move)
+    engine.process_move(p1_move)
     move_count += 1
+    print("ply: " + str(move_count))
+
+    if p2 == color:
+        uci, san = engine.get_engine_move()
+        print("suggested move: " + san)
+        clicker.click_piece(uci, san, p2)
+        clicker.click_destination(uci)
+        clicker.emoji()
+
 
     p2_move = get_move(p2, move_count)
-    move_count += 1
-
     print(p2 + " move: " + p2_move)
+    engine.process_move(p2_move)
+    move_count += 1

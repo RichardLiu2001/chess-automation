@@ -1191,3 +1191,78 @@ JavaScript error: resource://services-settings/Utils.jsm, line 153: TypeError: N
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
 
+1653799124323	Marionette	INFO	Stopped listening on port 52568
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1653799126008	Marionette	INFO	Stopped listening on port 52727
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1653800276509	Marionette	INFO	Stopped listening on port 52924
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1653812164828	geckodriver	INFO	Listening on 127.0.0.1:51269
+1653812165348	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "51270" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofileeSPbsm"
+2022-05-29 01:16:05.773 plugin-container[7592:286547] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-29 01:16:05.773 plugin-container[7592:286547] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-29 01:16:05.778 plugin-container[7592:286547] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-29 01:16:05.778 plugin-container[7592:286547] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-29 01:16:05.779 plugin-container[7592:286549] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-29 01:16:05.779 plugin-container[7592:286549] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1653812165784	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofileeSPbsm/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:51270/devtools/browser/01c7f83b-a485-4f45-ba5a-ef88adf61701
+1653812167199	Marionette	INFO	Listening on port 51289
+Read port: 51289
+1653812167312	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.intergient.com/pageos/1.8.3/videoCard.4de12bb2f660de18101d.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/playwireprebidheader597261727146/moatheader.js, line 220: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+Exiting due to channel error.
+Exiting due to channel error.
+1653812209111	geckodriver	INFO	Listening on 127.0.0.1:51368
+1653812209119	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "51369" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofileyMRbSd"
+2022-05-29 01:16:49.507 plugin-container[7649:287462] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-29 01:16:49.508 plugin-container[7649:287462] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-29 01:16:49.512 plugin-container[7649:287462] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-29 01:16:49.512 plugin-container[7649:287462] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-29 01:16:49.512 plugin-container[7649:287467] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-29 01:16:49.512 plugin-container[7649:287467] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1653812209520	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofileyMRbSd/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:51369/devtools/browser/d3ff9038-5bfc-48e3-bd36-224abdb42022
+1653812210971	Marionette	INFO	Listening on port 51385
+Read port: 51385
+1653812210987	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.intergient.com/pageos/1.8.3/videoCard.4de12bb2f660de18101d.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/playwireprebidheader597261727146/moatheader.js, line 220: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 11dc43760 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 11dc43760 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 115e3da40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 115e3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 115e3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 11dc435f0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 115e3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 11dc43760 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 115e3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 115e3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 115e3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 11dc43a40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 115e3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 7653, MediaDecoderStateMachine #1] WARNING: 115e3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+Exiting due to channel error.
+Exiting due to channel error.
