@@ -1,5 +1,6 @@
-# todo: new games, rematch, autoqueen/promotions
+# todo: new games, rematch, autoqueen/promotions, set level
 
+from unittest.mock import NonCallableMagicMock
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -20,6 +21,9 @@ def change_to_bullet():
     change_time_button.click()
     bullet_button = driver.find_element(By.CLASS_NAME, "ui_v5-button-component.ui_v5-button-basic.ui_v5-button-small.ui_v5-button-full.time-selector-category-btn")
     bullet_button.click()
+
+def set_level(level):
+    level_button = driver.find_element(By.CLASS_NAME, "authentication-intro-level.authentication-intro-level-v5")
 
 def find_match():
 
@@ -66,7 +70,7 @@ def wait_move(color, move_count):
 
 
 def get_move(player_color, move_count):
-
+    piece = None
     try:
         move_element = driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']').text
         try:
@@ -74,15 +78,19 @@ def get_move(player_color, move_count):
             piece = piece_element.get_attribute("data-figurine")
         except:
             piece = ""
+        if piece == None:
+            piece = ""
         return piece + move_element.text
         #return driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']').text
     except:
         move_element = wait_move(player_color, move_count)
-        
+        piece = None
         try:
             piece_element = move_element.find_element(by=By.XPATH, value=".//*")
             piece = piece_element.get_attribute("data-figurine")
         except:
+            piece = ""
+        if piece == None:
             piece = ""
         return piece + move_element.text
 
