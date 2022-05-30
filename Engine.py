@@ -10,7 +10,13 @@ class Engine:
     def process_move(self, move):
         
         if '=' in move:
-            self.board.push_san(move[1:] + move[0])
+            
+            reformat_move = move[1:] + move[0]
+            if '#' in reformat_move:
+               reformat_move = reformat_move.replace('#', '') + '#' 
+            
+            self.board.push_san(reformat_move)
+
         else:
             self.board.push_san(move)
 
