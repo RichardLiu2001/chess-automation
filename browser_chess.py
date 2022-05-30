@@ -1,17 +1,16 @@
 # todo: bug with aborted games (not hitting new game?)
 # might be because weird exception with new game element is stale. idk
-
 # sometimes doesnt accept rematch?
-# ValueError: invalid san: 'h1=+Q'
 
+# ValueError: invalid san: 'h1=+Q'
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 import threading
-from threading import Event, Thread
-
+from threading import Event
+import time
 from Engine import Engine
 from mouse import Clicker
 
@@ -199,6 +198,21 @@ def play_game(clicker, engine, color, in_game_condition):
         move_count += 1
 
 
+def wait_for_rematch(seconds, in_game_condition):
+
+    for _ in range(seconds):
+
+        if in_game_condition.is_set():
+            return 'INGAME'  
+        
+        try:
+            rematch_element = driver.find_element(By.CLASS_NAME, 'ui_v5-button-icon.icon-font-chess.checkmark')
+            return rematch_element
+        except:
+            time.sleep(1)
+
+    return None
+
 
 
 # play entire thing
@@ -236,21 +250,39 @@ def play():
                 # if new match button, means game is over
 
                 # see if dude wants rematch
-                try:
-                    print("waiting for rematch button...")
-                    rematch_element = WebDriverWait(driver, timeout=7).until(EC.presence_of_element_located((By.CLASS_NAME, 'ui_v5-button-icon.icon-font-chess.checkmark')))
-                    # hit rematch button
+                rematch_element = wait_for_rematch(7, in_game_condition)
+
+                if rematch_element == 'INGAME':
+                    continue
+                elif rematch_element is not None:
                     rematch_element.click()
-                    print("rematch!")
-                except:
-                    print("no rematch button found, hit new game!")
-                    # too long, don't rematch, hit new game
-                    # hacky fix
+                else:
                     try:
+                        new_match_element = new_match_button()
                         new_match_element.click()
                     except:
                         print("an exception occurred while trying to hit the new match element")
                         continue
+                    
+                # try:
+                #     print("waiting for rematch button...")
+                #     if not in_game_condition.is_set():
+                #         rematch_element = WebDriverWait(driver, timeout=7).until(EC.presence_of_element_located((By.CLASS_NAME, 'ui_v5-button-icon.icon-font-chess.checkmark')))
+                #         # hit rematch button
+                #         rematch_element.click()
+                #         print("rematch!")
+                # except:
+                #     print("no rematch button found after 7 seconds, hit new game!")
+                #     # too long, don't rematch, hit new game
+                #     # hacky fix
+                #     try:
+                #         #new_match_element.click()
+                #         new_match_element = new_match_button()
+                #         new_match_element.click()
+
+                #     except:
+                #         print("an exception occurred while trying to hit the new match element")
+                #         continue
             
             else:
                 print("no new match element found")
