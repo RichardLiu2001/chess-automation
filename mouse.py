@@ -11,7 +11,7 @@ class Clicker:
     def __init__(self, driver, color):
         self.driver = driver
         self.color = color
-    
+
     def initialize_sizes(self):
         if self.color == 'white':
             e = self.driver.find_element(By.CLASS_NAME, "piece.wr.square-11")
@@ -24,6 +24,9 @@ class Clicker:
         self.gear = self.driver.find_element(By.CLASS_NAME, "board-layout-icon.icon-font-chess.circle-gearwheel")
         self.gear_x = self.gear.location['x'] + self.gear.size['width'] / 2
         self.gear_y = self.gear.location['y'] + self.gear.size['height'] / 2
+
+    def set_color(self, color):
+        self.color = color
 
     def get_origin_square_element_castle(self, color):
         

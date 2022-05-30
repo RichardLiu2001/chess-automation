@@ -3,10 +3,9 @@ import chess.engine
 
 class Engine:
 
-    def __init__(self, color):
+    def __init__(self):
         self.engine = chess.engine.SimpleEngine.popen_uci("/Users/richardliu/chess-automation/Stockfish-master/src/stockfish")
         self.board = chess.Board()
-        self.color = color
 
     def process_move(self, move):
         
@@ -23,4 +22,7 @@ class Engine:
         san = self.board.san(move)
         #print(str(uci, san))
         return uci, san
+    
+    def reset(self):
+        self.board.reset()
 
