@@ -1266,3 +1266,70 @@ console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message f
 [Child 7653, MediaDecoderStateMachine #1] WARNING: 115e3d310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
 Exiting due to channel error.
 Exiting due to channel error.
+1653869901292	geckodriver	INFO	Listening on 127.0.0.1:63912
+1653869901303	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "63913" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofiledayf79"
+2022-05-29 17:18:21.750 plugin-container[23657:666432] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-29 17:18:21.751 plugin-container[23657:666432] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1653869901762	Marionette	INFO	Marionette enabled
+2022-05-29 17:18:21.768 plugin-container[23657:666432] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-29 17:18:21.768 plugin-container[23657:666432] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-29 17:18:21.768 plugin-container[23657:666430] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-29 17:18:21.768 plugin-container[23657:666430] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/wn/nq28_bjn1qqf_w4fppfsvm6w0000gn/T/rust_mozprofiledayf79/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:63913/devtools/browser/aedfa925-298a-4cf7-a5f0-97d44898a4cc
+1653869903356	Marionette	INFO	Listening on port 63929
+Read port: 63929
+1653869903400	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.chess.com"
+JavaScript error: https://www.chess.com/bundles/app/js/navigation.client.aa4e6129.js, line 1: Error: Request aborted
+JavaScript warning: https://cdn.intergient.com/pageos/1.8.3/videoCard.4de12bb2f660de18101d.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/playwireprebidheader597261727146/moatheader.js, line 220: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 139ed4480 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/2wSGrAFU2I9l4rVgSoL7oTdOOQiRBWDpfuX3kVoAHAw.js line 2 > eval line 3940 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 13c568bb0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 119a5b8d0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 11b383310 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 11cdc85f0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+1653869913921	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 13acd0bb0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 13c5fabb0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 13c5fabb0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 11be51d20 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 11cdc8bb0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 11cdc8bb0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 11d50ce90 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63d1a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63d1a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63d1a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63d1a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63d1a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 118bde1a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63da40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63d1a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63da40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63d1a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 137ce0480 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 137ce0a40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 118bde1a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 111d478d0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 111d478d0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 111d478d0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63da40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 118bde480 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63d1a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63d1a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63da40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+[Child 23661, MediaDecoderStateMachine #1] WARNING: 10f63d1a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:327
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/2wSGrAFU2I9l4rVgSoL7oTdOOQiRBWDpfuX3kVoAHAw.js line 2 > eval line 6532 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/2wSGrAFU2I9l4rVgSoL7oTdOOQiRBWDpfuX3kVoAHAw.js line 2 > eval line 3596 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/2wSGrAFU2I9l4rVgSoL7oTdOOQiRBWDpfuX3kVoAHAw.js line 2 > eval line 3066 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Marionette threw an error: TypeError: browsingContext.currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
