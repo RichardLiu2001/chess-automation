@@ -3,6 +3,10 @@
 # sometimes doesnt accept rematch?
 
 # ValueError: invalid san: 'h1=+Q'
+
+# things to track:
+# win/loss record, and by type (checkmate, timeout, resign, etc.)
+# max rematches 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -89,10 +93,8 @@ def get_move(move_count, in_game_condition):
         if piece == None:
             piece = ""
         return piece + move_element.text
-        #return driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']').text
     except:
         move_element = wait_move(move_count, in_game_condition)
-
         # game ended before they made the move, return None
         if move_element is None:
             return None
@@ -138,8 +140,6 @@ def startup():
     play_as_guest()
     change_to_bullet()
     find_match()
-
-
 
 # should only be called once the game starts
 def play_game(clicker, engine, color, in_game_condition):
@@ -193,7 +193,6 @@ def play_game(clicker, engine, color, in_game_condition):
             return
         engine.process_move(p2_move)
         move_count += 1
-
 
 def wait_for_rematch(seconds, in_game_condition):
 
@@ -249,6 +248,7 @@ def play():
                 if rematch_element == 'INGAME':
                     continue
                 elif rematch_element is not None:
+                    print("rematch!")
                     rematch_element.click()
                 else:
                     try:
@@ -261,7 +261,6 @@ def play():
             else:
                 print("no new match element found")
                 continue
-
 
 startup()
 play()
