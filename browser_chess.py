@@ -181,19 +181,16 @@ def play_game(clicker, engine, color, in_game_condition):
         if p1_move is None:
             return
 
-        # print(p1 + " move: " + p1_move)
         engine.process_move(p1_move)
         move_count += 1
 
         if p2 == color:
             uci, san = engine.get_engine_move()
-            # print("suggested move: " + san)
             clicker.make_move(uci, san)
 
         p2_move = get_move(move_count, in_game_condition)
         if p2_move is None:
             return
-        # print(p2 + " move: " + p2_move)
         engine.process_move(p2_move)
         move_count += 1
 
@@ -226,13 +223,10 @@ def play():
     update_in_game_condition(in_game_condition)
 
     while True:
-        #print("play loop")
         if in_game_condition.is_set():
             
             # delay between other thread interrupting and main thread continuing here
-
             print("in game condition set")
-            # play game
             color, opponent_color = get_color()
             print("your color: " + color)
             clicker.set_color(color)
@@ -263,26 +257,6 @@ def play():
                     except:
                         print("an exception occurred while trying to hit the new match element")
                         continue
-                    
-                # try:
-                #     print("waiting for rematch button...")
-                #     if not in_game_condition.is_set():
-                #         rematch_element = WebDriverWait(driver, timeout=7).until(EC.presence_of_element_located((By.CLASS_NAME, 'ui_v5-button-icon.icon-font-chess.checkmark')))
-                #         # hit rematch button
-                #         rematch_element.click()
-                #         print("rematch!")
-                # except:
-                #     print("no rematch button found after 7 seconds, hit new game!")
-                #     # too long, don't rematch, hit new game
-                #     # hacky fix
-                #     try:
-                #         #new_match_element.click()
-                #         new_match_element = new_match_button()
-                #         new_match_element.click()
-
-                #     except:
-                #         print("an exception occurred while trying to hit the new match element")
-                #         continue
             
             else:
                 print("no new match element found")
