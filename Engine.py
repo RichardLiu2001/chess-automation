@@ -15,6 +15,9 @@ class Engine:
             if '#' in reformat_move:
                reformat_move = reformat_move.replace('#', '') + '#' 
             
+            if '+' in reformat_move:
+                reformat_move = reformat_move.replace('+', '') + '+' 
+
             self.board.push_san(reformat_move)
 
         else:

@@ -1,13 +1,16 @@
-# todo: new games, rematch, autoqueen/promotions, set level
+# todo: bug with aborted games (not hitting new game?)
+# might be because weird exception with new game element is stale. idk
 
-from multiprocessing.connection import wait
-from unittest.mock import NonCallableMagicMock
+# sometimes doesnt accept rematch?
+# ValueError: invalid san: 'h1=+Q'
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 import threading
+from threading import Event, Thread
 
 from Engine import Engine
 from mouse import Clicker
@@ -32,10 +35,9 @@ def change_to_bullet():
     bullet_button.click()
 
 def set_level(level='Advanced'):
-    level_button = WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, "//span[text()='Advanced']")))
+    level_button = WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, "//span[text()='" + level + "']")))
     level_button.click()
     level_button.click()
-    print("here")
 
 def find_match():
     play_button = driver.find_element(By.CLASS_NAME, "ui_v5-button-component.ui_v5-button-primary.ui_v5-button-large.ui_v5-button-full")
@@ -64,16 +66,19 @@ def get_color():
                 continue
     return color, opponent_color
 
-def wait_move(color, move_count):
+def wait_move(move_count, in_game_condition):
     # return text of opponent move
-    while True:
+    
+    while in_game_condition.is_set():
         try:
             return driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']')
         except:
             continue
+    
+    # game ended before a move was made
+    return None
 
-
-def get_move(player_color, move_count):
+def get_move(move_count, in_game_condition):
     piece = None
     try:
         move_element = driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']').text
@@ -87,7 +92,11 @@ def get_move(player_color, move_count):
         return piece + move_element.text
         #return driver.find_element(by=By.XPATH, value='//div[@data-ply=' + '"' + str(move_count) + '"' + ']').text
     except:
-        move_element = wait_move(player_color, move_count)
+        move_element = wait_move(move_count, in_game_condition)
+
+        # game ended before they made the move, return None
+        if move_element is None:
+            return None
         piece = None
         try:
             piece_element = move_element.find_element(by=By.XPATH, value=".//*")
@@ -98,56 +107,60 @@ def get_move(player_color, move_count):
             piece = ""
         return piece + move_element.text
 
-hit_play()
-set_level()
-play_as_guest()
-change_to_bullet()
+def check_website_in_game():
+    try:
+        # if there is the draw button, you are in a game
+        driver.find_element(By.CLASS_NAME, "draw-button-label")
+        return True
+    except:
+        return False
+
+# runs every 3 seconds, updates the in_game_condition
+def update_in_game_condition(in_game_condition):
+    threading.Timer(3.0, update_in_game_condition, args=[in_game_condition]).start()
+    is_in_game = check_website_in_game()
+    if is_in_game:
+        in_game_condition.set()
+        print("checked - in game")
+    else:
+        in_game_condition.clear()
+        print("checked - not in game")
+
+
+def new_match_button():
+    try:
+        return driver.find_element(By.CLASS_NAME,'ui_v5-button-icon.icon-font-chess.plus')
+    except:
+        return None
+
+def startup():
+    hit_play()
+    set_level()
+    play_as_guest()
+    change_to_bullet()
+    find_match()
 
 
 
-find_match()
-
-# wait for draw button (match found)
-wait_game_start()
-color, opponent_color = get_color()
-print("you are " + color)
-engine = Engine()
-clicker = Clicker(driver, color)
-clicker.initialize_sizes()
-
-# big loop to play multiple games
-def play():
-
-    wait_game_start()
-    color, opponent_color = get_color()
-    clicker.set_color(color)
-    engine.reset()
-    play_game(engine, color)
-
-    # look for rematch for 8 seconds
-    # hit new match
-    #
-
-# 1. 
-
-def play_game(engine, color):
+# should only be called once the game starts
+def play_game(clicker, engine, color, in_game_condition):
 
     move_count = 1
-    opponent_color = 'white'
 
     if color == 'black':
-        opponent_move = get_move('white', move_count)
+        opponent_move = get_move(move_count, in_game_condition)
+
+        if opponent_move is None:
+            return
+
         print("white move: " + opponent_move)
         engine.process_move(opponent_move)
         move_count += 1
 
-    else:
-        opponent_color = 'black'
-
     # new match button = ui_v5-button-component ui_v5-button-basic
 
     #while (no new match button):
-    while True:
+    while in_game_condition.is_set():
     # make and register move
         p1 = 'white'
         p2 = 'black'
@@ -164,69 +177,147 @@ def play_game(engine, color):
             uci, san = engine.get_engine_move()
             clicker.make_move(uci, san)
 
-        p1_move = get_move(p1, move_count)
-        print(p1 + " move: " + p1_move)
+        p1_move = get_move(move_count, in_game_condition)
+
+        if p1_move is None:
+            return
+
+        # print(p1 + " move: " + p1_move)
         engine.process_move(p1_move)
         move_count += 1
 
         if p2 == color:
             uci, san = engine.get_engine_move()
-            print("suggested move: " + san)
+            # print("suggested move: " + san)
             clicker.make_move(uci, san)
 
-        p2_move = get_move(p2, move_count)
-        print(p2 + " move: " + p2_move)
+        p2_move = get_move(move_count, in_game_condition)
+        if p2_move is None:
+            return
+        # print(p2 + " move: " + p2_move)
         engine.process_move(p2_move)
         move_count += 1
 
-move_count = 1
 
-opponent_color = 'white'
 
-if color == 'black':
-    opponent_move = get_move('white', move_count)
-    print("white move: " + opponent_move)
-    engine.process_move(opponent_move)
-    move_count += 1
 
-else:
-    opponent_color = 'black'
+# play entire thing
+def play():
+    
+    engine = Engine()
+    clicker = Clicker(driver, None)
+    in_game_condition = Event()
+    
+    # updates every 3 seconds
+    update_in_game_condition(in_game_condition)
 
-while True:
-    # make and register move
-    p1 = 'white'
-    p2 = 'black'
+    while True:
+        #print("play loop")
+        if in_game_condition.is_set():
+            print("in game condition set")
+            # play game
+            color, opponent_color = get_color()
+            print("your color: " + color)
+            clicker.set_color(color)
+            clicker.initialize_sizes()
+            engine.reset()
+            play_game(clicker, engine, color, in_game_condition)
+        else:
+            
+            print("game over or looking...")
+            # game is over or looking for game
+            new_match_element = new_match_button()
+            
+            if new_match_element is not None:
+                print("there is a new match button!")
+                # if new match button, means game is over
 
-    if move_count % 3 == 0:
-        clicker.emoji()
+                # see if dude wants rematch
+                try:
+                    rematch_element = WebDriverWait(driver, timeout=7).until(EC.presence_of_element_located((By.CLASS_NAME, 'ui_v5-button-icon.icon-font-chess.checkmark')))
+                    # hit rematch button
+                    rematch_element.click()
+                    print("rematch!")
+                except:
+                    
+                    # too long, don't rematch, hit new game
 
-    if move_count % 2 == 0:
-        # this is black's move
-        p1 = p2
-        p2 = 'white'
+                    # hacky fix
+                    try:
+                        new_match_element.click()
+                    except:
+                        continue
+            
+            else:
+                continue
 
-    if p1 == color:
-        uci, san = engine.get_engine_move()
-        clicker.make_move(uci, san)
 
-    p1_move = get_move(p1, move_count)
-    print(p1 + " move: " + p1_move)
-    engine.process_move(p1_move)
-    move_count += 1
+# ------------------------------------------------------------------# 
+startup()
+play()
+# wait for draw button (match found)
 
-    if p2 == color:
-        uci, san = engine.get_engine_move()
-        print("suggested move: " + san)
-        clicker.make_move(uci, san)
 
-    p2_move = get_move(p2, move_count)
-    print(p2 + " move: " + p2_move)
-    engine.process_move(p2_move)
-    move_count += 1
+
+
+# wait_game_start()
+# color, opponent_color = get_color()
+# print("you are " + color)
+# engine = Engine()
+# clicker = Clicker(driver, color)
+# clicker.initialize_sizes()
+
+
+
+
+
+# move_count = 1
+
+# opponent_color = 'white'
+
+# if color == 'black':
+#     opponent_move = get_move(move_count)
+#     print("white move: " + opponent_move)
+#     engine.process_move(opponent_move)
+#     move_count += 1
+
+# else:
+#     opponent_color = 'black'
+
+# while True:
+#     # make and register move
+#     p1 = 'white'
+#     p2 = 'black'
+
+#     if move_count % 3 == 0:
+#         clicker.emoji()
+
+#     if move_count % 2 == 0:
+#         # this is black's move
+#         p1 = p2
+#         p2 = 'white'
+
+#     if p1 == color:
+#         uci, san = engine.get_engine_move()
+#         clicker.make_move(uci, san)
+
+#     p1_move = get_move(move_count)
+#     print(p1 + " move: " + p1_move)
+#     engine.process_move(p1_move)
+#     move_count += 1
+
+#     if p2 == color:
+#         uci, san = engine.get_engine_move()
+#         print("suggested move: " + san)
+#         clicker.make_move(uci, san)
+
+#     p2_move = get_move(move_count)
+#     print(p2 + " move: " + p2_move)
+#     engine.process_move(p2_move)
+#     move_count += 1
 
 
     # poll new game:
     # poll rematch
     #rematch: ui_v5-button-icon icon-font-chess checkmark
-
 
