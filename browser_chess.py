@@ -214,6 +214,9 @@ def play():
     while True:
         #print("play loop")
         if in_game_condition.is_set():
+            
+            # delay between other thread interrupting and main thread continuing here
+
             print("in game condition set")
             # play game
             color, opponent_color = get_color()
@@ -234,90 +237,25 @@ def play():
 
                 # see if dude wants rematch
                 try:
+                    print("waiting for rematch button...")
                     rematch_element = WebDriverWait(driver, timeout=7).until(EC.presence_of_element_located((By.CLASS_NAME, 'ui_v5-button-icon.icon-font-chess.checkmark')))
                     # hit rematch button
                     rematch_element.click()
                     print("rematch!")
                 except:
-                    
+                    print("no rematch button found, hit new game!")
                     # too long, don't rematch, hit new game
-
                     # hacky fix
                     try:
                         new_match_element.click()
                     except:
+                        print("an exception occurred while trying to hit the new match element")
                         continue
             
             else:
+                print("no new match element found")
                 continue
 
 
-# ------------------------------------------------------------------# 
 startup()
 play()
-# wait for draw button (match found)
-
-
-
-
-# wait_game_start()
-# color, opponent_color = get_color()
-# print("you are " + color)
-# engine = Engine()
-# clicker = Clicker(driver, color)
-# clicker.initialize_sizes()
-
-
-
-
-
-# move_count = 1
-
-# opponent_color = 'white'
-
-# if color == 'black':
-#     opponent_move = get_move(move_count)
-#     print("white move: " + opponent_move)
-#     engine.process_move(opponent_move)
-#     move_count += 1
-
-# else:
-#     opponent_color = 'black'
-
-# while True:
-#     # make and register move
-#     p1 = 'white'
-#     p2 = 'black'
-
-#     if move_count % 3 == 0:
-#         clicker.emoji()
-
-#     if move_count % 2 == 0:
-#         # this is black's move
-#         p1 = p2
-#         p2 = 'white'
-
-#     if p1 == color:
-#         uci, san = engine.get_engine_move()
-#         clicker.make_move(uci, san)
-
-#     p1_move = get_move(move_count)
-#     print(p1 + " move: " + p1_move)
-#     engine.process_move(p1_move)
-#     move_count += 1
-
-#     if p2 == color:
-#         uci, san = engine.get_engine_move()
-#         print("suggested move: " + san)
-#         clicker.make_move(uci, san)
-
-#     p2_move = get_move(move_count)
-#     print(p2 + " move: " + p2_move)
-#     engine.process_move(p2_move)
-#     move_count += 1
-
-
-    # poll new game:
-    # poll rematch
-    #rematch: ui_v5-button-icon icon-font-chess checkmark
-
