@@ -7,6 +7,12 @@
 # things to track:
 # win/loss record, and by type (checkmate, timeout, resign, etc.)
 # max rematches 
+
+
+# future plans: 
+# add square highlighting, but let me control moving the pieces
+# sign into fake female account to farm rematches, see how high I can get
+# before getting banned
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -196,7 +202,7 @@ def play_game(clicker, engine, color, in_game_condition):
 
 def wait_for_rematch(seconds, in_game_condition):
 
-    for _ in range(seconds):
+    for _ in range(2 * seconds):
 
         if in_game_condition.is_set():
             return 'INGAME'  
@@ -205,7 +211,7 @@ def wait_for_rematch(seconds, in_game_condition):
             rematch_element = driver.find_element(By.CLASS_NAME, 'ui_v5-button-icon.icon-font-chess.checkmark')
             return rematch_element
         except:
-            time.sleep(1)
+            time.sleep(.5)
 
     return None
 
