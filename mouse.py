@@ -90,11 +90,24 @@ class Clicker:
             action.click()
             action.perform()
 
+    def right_click_coordinate(self, x, y):
+        action = webdriver.common.action_chains.ActionChains(self.driver)
+        action.move_to_element_with_offset(self.gear, x - self.gear_x, y - self.gear_y)
+        action.context_click().pause(0.3).perform()
+
+    def right_click_origin(self, uci):
+        x, y = self.uci_square_to_coordinate(uci[0], uci[1])
+        self.right_click_coordinate(x, y)   
+
+    def right_click_destination(self, uci):
+        x, y = self.uci_square_to_coordinate(uci[2], uci[3])
+        self.right_click_coordinate(x, y) 
+
+
     def click_origin(self, uci):
         
         x, y = self.uci_square_to_coordinate(uci[0], uci[1])
         self.click_coordinate(x, y, 1)
-
 
     def click_destination(self, uci, san):
         
@@ -106,9 +119,28 @@ class Clicker:
         else:
             self.click_coordinate(x, y, 1)
 
+    def drag_and_drop_move(self, uci, san):
+        origin_x, origin_y = self.uci_square_to_coordinate(uci[0], uci[1])
+        dest_x, dest_y = self.uci_square_to_coordinate(uci[2], uci[3])
+
+        action = webdriver.common.action_chains.ActionChains(self.driver)
+        action.move_to_element_with_offset(self.gear, origin_x - self.gear_x, origin_y - self.gear_y)
+        action.click_and_hold()
+        action.move_by_offset(dest_x - origin_x, dest_y - origin_y)
+        action.release()
+        action.perform()
+
+        if '=' in san:
+            self.click_coordinate(dest_x, dest_y, 1)
+
     def make_move(self, uci, san):
         self.click_origin(uci)
         self.click_destination(uci, san)
+
+    def highlight_move(self, uci):
+        self.right_click_origin(uci)
+        self.right_click_destination(uci)
+
 
     def emoji(self):
         try:

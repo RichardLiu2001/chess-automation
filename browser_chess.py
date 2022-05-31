@@ -13,6 +13,7 @@
 # add square highlighting, but let me control moving the pieces
 # sign into fake female account to farm rematches, see how high I can get
 # before getting banned
+# add premoves
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -180,7 +181,9 @@ def play_game(clicker, engine, color, in_game_condition):
 
         if p1 == color:
             uci, san = engine.get_engine_move()
+            #clicker.highlight_move(uci)
             clicker.make_move(uci, san)
+            #clicker.drag_and_drop_move(uci, san)
 
         p1_move = get_move(move_count, in_game_condition)
 
@@ -192,7 +195,9 @@ def play_game(clicker, engine, color, in_game_condition):
 
         if p2 == color:
             uci, san = engine.get_engine_move()
+            #clicker.highlight_move(uci)
             clicker.make_move(uci, san)
+            #clicker.drag_and_drop_move(uci, san)
 
         p2_move = get_move(move_count, in_game_condition)
         if p2_move is None:
