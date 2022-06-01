@@ -32,30 +32,6 @@ chess_url = "https://www.chess.com"
 driver.get(chess_url)
 
 
-def login(username, password):
-
-    # driver = webdriver.Firefox()
-    # chess_url = "https://www.chess.com"
-    # driver.get(chess_url)
-
-    login_button = driver.find_element(by=By.CLASS_NAME, value='button.auth.login.ui_v5-button-component.ui_v5-button-primary')
-    login_button.click()
-
-    username_form = driver.find_element(by=By.ID, value="username")
-    username_form.send_keys(username)
-
-    password_form = driver.find_element(by=By.ID, value="password")
-    password_form.send_keys(password)
-
-    login = driver.find_element(By.ID, 'login')
-    login.click()
-
-    modal_x = driver.find_element(By.CLASS_NAME, 'icon-font-chess.x.ui_outside-close-icon')
-    modal_x.click()
-
-    new_game = driver.find_element(By.ID, 'quick-link-new_game')
-    new_game.click()
-
 def hit_play():
     play_online_button = driver.find_element(By.CLASS_NAME, "index-guest-button.ui_v5-button-component.ui_v5-button-large.ui_v5-button-primary.ui_v5-button-full")
     play_online_button.click()
@@ -247,6 +223,32 @@ def wait_for_rematch(seconds, in_game_condition):
 
     return None
 
+def login(username, password):
+
+    # driver = webdriver.Firefox()
+    # chess_url = "https://www.chess.com"
+    # driver.get(chess_url)
+
+    login_button = driver.find_element(by=By.CLASS_NAME, value='button.auth.login.ui_v5-button-component.ui_v5-button-primary')
+    login_button.click()
+
+    username_form = driver.find_element(by=By.ID, value="username")
+    username_form.send_keys(username)
+
+    password_form = driver.find_element(by=By.ID, value="password")
+    password_form.send_keys(password)
+
+    login = driver.find_element(By.ID, 'login')
+    login.click()
+
+    modal_x = driver.find_element(By.CLASS_NAME, 'icon-font-chess.x.ui_outside-close-icon')
+    modal_x.click()
+
+    new_game = driver.find_element(By.ID, 'quick-link-new_game')
+    new_game.click()
+
+    change_to_bullet()
+    find_match()
 
 
 # play entire thing
@@ -300,8 +302,7 @@ def play():
                 print("no new match element found")
                 continue
 
-#startup()
-login(USERNAME, PASSWORD)
-change_to_bullet()
-find_match()
+startup()
+#login(USERNAME, PASSWORD)
+
 play()
