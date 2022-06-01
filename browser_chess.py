@@ -18,17 +18,43 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 import threading
 from threading import Event
 import time
 from Engine import Engine
 from mouse import Clicker
 
+USERNAME = 'ChristinaSmith34'
+PASSWORD = 'Bael2023!'
+
 driver = webdriver.Firefox()
 chess_url = "https://www.chess.com"
 driver.get(chess_url)
 
+
+def login(username, password):
+
+    # driver = webdriver.Firefox()
+    # chess_url = "https://www.chess.com"
+    # driver.get(chess_url)
+
+    login_button = driver.find_element(by=By.CLASS_NAME, value='button.auth.login.ui_v5-button-component.ui_v5-button-primary')
+    login_button.click()
+
+    username_form = driver.find_element(by=By.ID, value="username")
+    username_form.send_keys(username)
+
+    password_form = driver.find_element(by=By.ID, value="password")
+    password_form.send_keys(password)
+
+    login = driver.find_element(By.ID, 'login')
+    login.click()
+
+    modal_x = driver.find_element(By.CLASS_NAME, 'icon-font-chess.x.ui_outside-close-icon')
+    modal_x.click()
+
+    new_game = driver.find_element(By.ID, 'quick-link-new_game')
+    new_game.click()
 
 def hit_play():
     play_online_button = driver.find_element(By.CLASS_NAME, "index-guest-button.ui_v5-button-component.ui_v5-button-large.ui_v5-button-primary.ui_v5-button-full")
@@ -39,7 +65,7 @@ def play_as_guest():
     guest_button.click() 
 
 def change_to_bullet():
-    change_time_button = driver.find_element(By.CLASS_NAME, "icon-font-chess.chevron-bottom.time-selector-chevron")
+    change_time_button = WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.CLASS_NAME, 'icon-font-chess.chevron-bottom.time-selector-chevron')))
     change_time_button.click()
     bullet_button = driver.find_element(By.CLASS_NAME, "ui_v5-button-component.ui_v5-button-basic.ui_v5-button-small.ui_v5-button-full.time-selector-category-btn")
     bullet_button.click()
@@ -50,7 +76,8 @@ def set_level(level='Advanced'):
     level_button.click()
 
 def find_match():
-    play_button = driver.find_element(By.CLASS_NAME, "ui_v5-button-component.ui_v5-button-primary.ui_v5-button-large.ui_v5-button-full")
+    play_button = WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.CLASS_NAME, "ui_v5-button-component.ui_v5-button-primary.ui_v5-button-large.ui_v5-button-full")))
+    #play_button = driver.find_element(By.CLASS_NAME, "ui_v5-button-component.ui_v5-button-primary.ui_v5-button-large.ui_v5-button-full")
     play_button.click()
 
 def wait_game_start():
@@ -273,5 +300,8 @@ def play():
                 print("no new match element found")
                 continue
 
-startup()
+#startup()
+login(USERNAME, PASSWORD)
+change_to_bullet()
+find_match()
 play()
