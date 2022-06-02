@@ -1,3 +1,4 @@
 .DS_Store
 Stockfish-master/
 __pycache__/
+geckodriver.log
