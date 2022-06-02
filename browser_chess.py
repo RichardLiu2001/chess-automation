@@ -8,6 +8,12 @@
 # win/loss record, and by type (checkmate, timeout, resign, etc.)
 # max rematches 
 
+# class "header-title-component"
+# class "header-subtitle-component"
+
+# user-username-component user-username-dark user-username-link user-tagline-username
+# user-username-component user-username-dark user-username-link user-tagline-username
+
 
 # future plans: 
 # add square highlighting, but let me control moving the pieces
@@ -23,6 +29,7 @@ from threading import Event
 import time
 from Engine import Engine
 from mouse import Clicker
+from StatTracker import StatTracker
 
 USERNAME = 'ChristinaSmith34'
 PASSWORD = 'Bael2023!'
@@ -30,6 +37,28 @@ PASSWORD = 'Bael2023!'
 driver = webdriver.Firefox()
 chess_url = "https://www.chess.com"
 driver.get(chess_url)
+
+
+def get_result_of_game():
+
+    result_text = driver.find_element (By.CLASS_NAME, "header-title-component").text
+
+    result = 'win'
+    if "White" in result_text or "Black" in result_text:
+        result = "loss"
+    
+    if "Draw" in result_text:
+        result = 'draw'
+
+    if "Aborted" in result_text:
+        result = 'abort'
+
+    by = driver.find_element (By.CLASS_NAME, "header-subtitle-component").text
+
+    opponent = driver.find_elements(By.CLASS_NAME, "user-username-component.user-username-dark.user-username-link.user-tagline-username")[0].text
+    #opponent = 'test'
+
+    return result, by, opponent
 
 
 def hit_play():
@@ -132,10 +161,10 @@ def update_in_game_condition(in_game_condition):
     is_in_game = check_website_in_game()
     if is_in_game:
         in_game_condition.set()
-        print("checked - in game")
+        #print("checked - in game")
     else:
         in_game_condition.clear()
-        print("checked - not in game")
+        #print("checked - not in game")
 
 
 def new_match_button():
@@ -162,7 +191,6 @@ def play_game(clicker, engine, color, in_game_condition):
         if opponent_move is None:
             return
 
-        print("white move: " + opponent_move)
         engine.process_move(opponent_move)
         move_count += 1
 
@@ -256,6 +284,7 @@ def play():
     
     engine = Engine()
     clicker = Clicker(driver, None)
+    stat_tracker = StatTracker()
     in_game_condition = Event()
     
     # updates every 3 seconds
@@ -265,22 +294,30 @@ def play():
         if in_game_condition.is_set():
             
             # delay between other thread interrupting and main thread continuing here
-            print("in game condition set")
+            #print("in game condition set")
             color, opponent_color = get_color()
-            print("your color: " + color)
+            #print("your color: " + color)
             clicker.set_color(color)
             clicker.initialize_sizes()
             engine.reset()
             play_game(clicker, engine, color, in_game_condition)
         else:
             
-            print("game over or looking...")
+            #print("game over or looking...")
             # game is over or looking for game
             new_match_element = new_match_button()
             
             if new_match_element is not None:
-                print("there is a new match button!")
+                #print("there is a new match button!")
                 # if new match button, means game is over
+
+                # collect data
+                try:
+                    result, by, opponent = get_result_of_game()
+                    stat_tracker.update(result, by, opponent)
+                    stat_tracker.print_stats()
+                except:
+                    pass
 
                 # see if dude wants rematch
                 rematch_element = wait_for_rematch(7, in_game_condition)
@@ -291,15 +328,19 @@ def play():
                     print("rematch!")
                     rematch_element.click()
                 else:
+                    
+                    if in_game_condition.is_set():
+                        continue
+
                     try:
                         new_match_element = new_match_button()
                         new_match_element.click()
                     except:
-                        print("an exception occurred while trying to hit the new match element")
+                        #print("an exception occurred while trying to hit the new match element")
                         continue
             
             else:
-                print("no new match element found")
+                #print("no new match element found")
                 continue
 
 startup()
