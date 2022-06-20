@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 import random
 emojis = [
-'laugh', 'kiss', 'strong', 'tongue', 'star', 'evil', 'grin'
+'laugh', 'kiss', 'strong', 'tongue', 'star', 'evil', 'grin', 'resign', 'facepalm', 'eek', 'tdown', 'mate'
 ]
 
 
