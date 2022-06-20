@@ -20,6 +20,7 @@
 # sign into fake female account to farm rematches, see how high I can get
 # before getting banned
 # add premoves
+# move faster when running out of time (turn off emojis)
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait

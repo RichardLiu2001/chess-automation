@@ -3,7 +3,7 @@ import chess.engine
 
 class Engine:
 
-    def __init__(self):
+    def __init__(self, level=3000):
         self.engine = chess.engine.SimpleEngine.popen_uci("/Users/richardliu/chess-automation/Stockfish-master/src/stockfish")
         self.board = chess.Board()
 
@@ -24,7 +24,7 @@ class Engine:
             self.board.push_san(move)
 
     def get_engine_move(self):
-        uci_Move = self.engine.play(self.board, chess.engine.Limit(time=0.5))
+        uci_Move = self.engine.play(self.board, chess.engine.Limit(time=0.1))
         uci = uci_Move.move.uci()
 
         move = self.board.parse_uci(uci)
